@@ -73,6 +73,7 @@ public class UIManager : MonoBehaviour
 #region Update
     void Update()
     {
+        //Debug.Log(mouseAction.ReadValue<Vector2>());
         MoveCrosshair();
         SelectTarget();
     }
@@ -80,6 +81,11 @@ public class UIManager : MonoBehaviour
     private void MoveCrosshair() 
     {
         Vector2 mousePos = mouseAction.ReadValue<Vector2>();
+        Vector3 crossPos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.farClipPlane/100));
+        //ok so /100 worked idk if it scales or not and cant be bothered rn
+        crossPos.y = 0;
+        //Debug.Log(crossPos);
+        crosshair.position = crossPos;
 
         // FIXME: Move the crosshair position to the mouse position (in world coordinates)
         // crosshair.position = ...;

@@ -29,6 +29,8 @@ You can use the [`Camera.main`](https://docs.unity3d.com/ScriptReference/Camera-
 
 There are two QA scenes in Scenes/QA to test this function with an orthogrpahic camera and a perspective camera. Play both scenes to test your code works.
 
+//YES
+
 ## Step 2 - Zoom
 
 If you select the main camera in the scene, you can see a white gizmo in the shape of a box that shows the 'view volume' of the camera: i.e. the space of objects it can see. 
